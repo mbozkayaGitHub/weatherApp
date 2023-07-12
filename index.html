@@ -44,7 +44,13 @@
     <script src="app.js">
 
       const apiKey ="08124597654215b2993aeaeba86aa177";
-      const apiUrl ="https://api.openweathermap.org/data/2.5/weather?q=Istanbul&appid=&units=metric";
+      const apiUrl ="https://api.openweathermap.org/data/2.5/weather?appid=&units=metric&q=Ankara";
+
+      async function checkWeather(){
+        const response = await fetch(apiUrl + `&appid=${apikey}`);
+        var data = await response.jason();
+        console.log(data);
+      }
     </script>
   </body>
 </html>
